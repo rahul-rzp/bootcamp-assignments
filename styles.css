@@ -1,0 +1,40 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+  background-color: pink;
+  height: 5vh;
+}
+
+.content-container {
+  display: flex;
+  height: 90vh;
+}
+
+.content-container > * {
+  flex: 1;
+}
+
+.menu {
+  background-color: yellow;
+}
+
+.content {
+  background-color: green;
+  flex: 4;
+}
+
+aside {
+  background-color: orange;
+}
+
+footer {
+  background-color: lightblue;
+  height: 5vh;
+}
