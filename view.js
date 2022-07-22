@@ -3,6 +3,15 @@ const contactBookData = localStorageData ? JSON.parse(localStorageData) : [];
 console.log(contactBookData, "data");
 
 const tableElement = document.createElement('table');
+const tableHeader = document.createElement('thead');
+const tableHeaderName = document.createElement('th');
+tableHeaderName.innerHTML = "Name";
+
+const tableHeaderContact = document.createElement('th');
+tableHeaderContact.innerHTML = "Contact";
+tableElement.appendChild(tableHeader);
+tableHeader.appendChild(tableHeaderName);
+tableHeader.appendChild(tableHeaderContact);
 
 contactBookData.forEach(item => {
   const trElement = tableElement.insertRow();
@@ -17,4 +26,4 @@ contactBookData.forEach(item => {
   tableElement.appendChild(trElement);
 });
 
-document.body.appendChild(tableElement);
+document.querySelector('.content').appendChild(tableElement);
